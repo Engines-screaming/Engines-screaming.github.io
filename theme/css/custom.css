@@ -131,6 +131,7 @@ table.highlighttable {
 	width: 100%;
 	height: auto;
 	overflow: auto;
+	background: #f8f8f8;
 }
 
 .linenodiv {

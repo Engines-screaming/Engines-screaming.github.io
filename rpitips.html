@@ -55,7 +55,7 @@
 						<li><label>Categories</label></li>
 							<li ><a href="https://engines-screaming.github.io/category/datasci.html">DataSci</a></li>
 							<li ><a href="https://engines-screaming.github.io/category/fun.html">Fun</a></li>
-							<li ><a href="https://engines-screaming.github.io/category/notes.html">Notes</a></li>
+							<li class="active"><a href="https://engines-screaming.github.io/category/notes.html">Notes</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="https://www.linkedin.com/in/karl-ravago-937148161/">LinkedIn</a></li>
@@ -81,7 +81,7 @@
 						<ul class="left">
 								<li ><a href="https://engines-screaming.github.io/category/datasci.html">DataSci</a></li>
 								<li ><a href="https://engines-screaming.github.io/category/fun.html">Fun</a></li>
-								<li ><a href="https://engines-screaming.github.io/category/notes.html">Notes</a></li>
+								<li class="active"><a href="https://engines-screaming.github.io/category/notes.html">Notes</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                           
@@ -98,10 +98,45 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on Karl Ravago</h1>
-    <ul>
-        <li><a href="https://engines-screaming.github.io/author/karl-ravago.html">Karl Ravago</a> (4)</li>
-    </ul>
+<article>
+	<h2>Raspberry Pi Tips</h2>
+	<h3>Raspberry Pi Tips</h3>
+<p>The raspberry pi is a computer that you can leave on since it consumes such low amounts of power.
+Here I make notes on the ways I configure my raspberry pi to be more productive.</p>
+<ol>
+<li>Enable SSH
+When you start up a raspberry pi for the first time, you need to attach it to a monitor with a hdmi cable. You can have the
+raspberry pi do your bidding remotely using SSH. You can enable it by opening the raspi-config menu and selecting the 'Interface Options'. To access the menus, use the command:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo raspi-config
+</code></pre></div>
+
+<p><img alt="menu" src="https://engines-screaming.github.io/ssh.jpeg"></p>
+<ol>
+<li>Using Tmux
+Sometimes it is useful to have a session running in the raspberry pi to come back to. For example, if you wanted to start a python script and then come back to it hours later, tmux helps you so that you don't stop the script from exiting SSH. </li>
+</ol>
+<p>Install Tmux by:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install tmux
+</code></pre></div>
+
+<p>Then after SSH'ing into your pi, start a tmux session by:</p>
+<div class="highlight"><pre><span></span><code>tmux
+</code></pre></div>
+
+<p>When you are done and want to disconnect from the pi:</p>
+<div class="highlight"><pre><span></span><code>Ctrl+b, d
+</code></pre></div>
+
+<p>to disconnect from the session. </p>
+<p>To reattach to the session again and see the results of your script:</p>
+<div class="highlight"><pre><span></span><code>tmux attach-session -t <span class="m">0</span> 
+</code></pre></div>
+	<hr/>
+	<h6>Written by <a href="https://engines-screaming.github.io/author/karl-ravago.html">Karl Ravago</a> in <a href="https://engines-screaming.github.io/category/notes.html">Notes</a> on Tue 15 December 2020.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
